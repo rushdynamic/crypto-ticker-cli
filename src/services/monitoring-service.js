@@ -1,5 +1,5 @@
 import WebSocket from 'ws';
-import { updatePrice, displayPrice } from './display-service.js';
+import { updatePrice } from './display-service.js';
 
 const monitor = (coinsList) => {
 	console.log('Creating WS connection to Binance');
@@ -8,7 +8,6 @@ const monitor = (coinsList) => {
 	coinsList.forEach((coin) => {
 		params.push(`${coin}usdt@aggTrade`);
 	});
-	setInterval(displayPrice, 2000);
 	const payload = {
 		method: 'SUBSCRIBE',
 		params,
