@@ -11,7 +11,8 @@
 		"indent": "off",
 		"no-tabs": "off",
 		"max-len": "off",
-		"prefer-const": "warn"
+		"prefer-const": "warn",
+		"object-curly-newline": "off"
 	},
 	"plugins": ["prettier"]
 }

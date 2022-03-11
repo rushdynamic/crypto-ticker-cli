@@ -1,3 +1,4 @@
+import cliCursor from 'cli-cursor';
 import ora from 'ora';
 import * as term from '../utils/term.js';
 
@@ -19,9 +20,13 @@ const clearDisplay = () => {
 };
 
 const getColor = (coin, value) => {
-	if (priceMap.has(`${coin}_prev`)) {
-		if (value > priceMap.get(`${coin}_prev`)) return ['\x1b[32m', '\x1b[0m'];
-		return ['\x1b[31m', '\x1b[0m'];
+	const key = `${coin}_prev`;
+	if (priceMap.has(key)) {
+		const percentage = ((value - priceMap.get(key)) / priceMap.get(key)) * 100;
+		if (Math.abs(percentage) > 0.01) {
+			if (percentage > 0) return ['\x1b[32m', '\x1b[0m'];
+			return ['\x1b[31m', '\x1b[0m'];
+		}
 	}
 	return ['\x1b[37m', '\x1b[0m'];
 };
@@ -39,28 +44,33 @@ const displayPrice = () => {
 		term.setSize();
 	}
 	if (priceMap.size > 0) {
-		let printStr = '\x1b[33mCoin\t\tPrice\x1b[0m';
+		let printStr = '\x1b[33mCoin\t\tPrice (USDT)\x1b[0m';
+		let rowColor = ['\x1b[37m', '\x1b[0m'];
 		// eslint-disable-next-line no-restricted-syntax
 		for (const [key, value] of priceMap) {
 			if (!key.includes('prev')) {
-				const rowColor = getColor(key, value);
+				rowColor = getColor(key, parseFloat(value));
 				printStr += `\n${key.replace('USDT', '')}\t --- \t${rowColor[0]}${parseFloat(value)}${rowColor[1]}`;
 			}
 		}
 		clearPriceValues(priceMap.size + 1);
 		process.stdout.cursorTo(0);
 		process.stdout.write(`${printStr}\n`);
+		cliCursor.hide();
+	}
+};
+
+const updatePrevPrice = (coin, price) => {
+	if (priceMap.has(coin)) {
+		priceMap.set(`${coin}_prev`, price);
 	}
 };
 
 const updatePrice = (coin, price) => {
 	if (coin && price) {
-		if (priceMap.has(coin)) {
-			priceMap.set(`${coin}_prev`, priceMap.get(coin));
-		}
 		priceMap.set(coin, price);
 	}
 	displayPrice();
 };
 
-export { updatePrice, clearDisplay, spinnerOptions };
+export { updatePrice, updatePrevPrice, clearDisplay, spinnerOptions };

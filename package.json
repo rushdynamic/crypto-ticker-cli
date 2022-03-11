@@ -25,6 +25,7 @@
     "prettier": "^2.5.1"
   },
   "dependencies": {
+    "cli-cursor": "^4.0.0",
     "ora": "^6.1.0",
     "ws": "^8.5.0"
   },
