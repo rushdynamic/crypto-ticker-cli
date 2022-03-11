@@ -15,7 +15,7 @@ const monitor = (coinsList) => {
 		id: 1
 	};
 	ws.on('open', () => {
-		ws.send(JSON.stringify(payload), async (response) => console.log('Response from Binance:', response));
+		ws.send(JSON.stringify(payload));
 		ws.onmessage = (event) => {
 			const respPayload = JSON.parse(event.data);
 			updatePrice(respPayload.s, respPayload.p);
