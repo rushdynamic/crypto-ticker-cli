@@ -1,0 +1,9 @@
+{
+  "extends": ["airbnb-base", "plugin:@typescript-eslint/recommended"],
+  "rules": {
+    "no-console": "off",
+    "import/newline-after-import": "warn",
+    "comma-dangle": "off"
+  },
+  "plugins": ["prettier"]
+}
