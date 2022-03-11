@@ -1,8 +1,9 @@
 import WebSocket from 'ws';
-import { updatePrice } from './display-service.js';
+import { spinnerOptions, clearDisplay, updatePrice } from './display-service.js';
 
 const monitor = (coinsList) => {
-	console.log('Creating WS connection to Binance');
+	clearDisplay();
+	spinnerOptions.start('Establishing connection to Binance...');
 	const ws = new WebSocket('wss://stream.binance.com:9443/ws');
 	const params = [];
 	coinsList.forEach((coin) => {
@@ -15,6 +16,8 @@ const monitor = (coinsList) => {
 	};
 	ws.on('open', () => {
 		ws.send(JSON.stringify(payload));
+		spinnerOptions.stop();
+		clearDisplay();
 		ws.onmessage = (event) => {
 			const respPayload = JSON.parse(event.data);
 			updatePrice(respPayload.s, respPayload.p);
