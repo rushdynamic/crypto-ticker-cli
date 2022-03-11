@@ -9,7 +9,9 @@
 		"no-loop-func": "off",
 		"no-await-in-loop": "off",
 		"indent": "off",
-		"no-tabs": "off"
+		"no-tabs": "off",
+		"max-len": "off",
+		"prefer-const": "warn"
 	},
 	"plugins": ["prettier"]
 }
