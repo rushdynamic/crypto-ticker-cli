@@ -5,7 +5,8 @@
 	"main": "src/app.js",
 	"bin": "src/app.js",
 	"scripts": {
-		"start": "node src/app.js"
+		"start": "node src/app.js",
+		"release": "release-it"
 	},
 	"keywords": [
 		"cryptocurrency",
@@ -32,12 +33,18 @@
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-import": "^2.25.4",
 		"eslint-plugin-prettier": "^4.0.0",
-		"prettier": "^2.5.1"
+		"prettier": "^2.5.1",
+		"release-it": "^14.12.5"
 	},
 	"dependencies": {
 		"cli-cursor": "^4.0.0",
 		"ora": "^6.1.0",
 		"ws": "^8.5.0"
 	},
-	"type": "module"
+	"type": "module",
+	"release-it": {
+		"github": {
+			"release": true
+		}
+	}
 }
