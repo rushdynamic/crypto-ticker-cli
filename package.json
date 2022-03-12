@@ -1,21 +1,21 @@
 {
-  "name": "crypto-price-tracker-cli",
+  "name": "crypto-ticker-cli",
   "version": "1.0.0",
-  "description": "CLI tool that shows realtime cryptocurrency prices",
+  "description": "CLI tool that shows cryptocurrency prices in realtime",
   "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RushDynamic/crypto-price-tracker-cli.git"
+    "url": "git+https://github.com/RushDynamic/crypto-ticker-cli.git"
   },
   "author": "Gokul Syam",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RushDynamic/crypto-price-tracker-cli/issues"
+    "url": "https://github.com/RushDynamic/crypto-ticker-cli/issues"
   },
-  "homepage": "https://github.com/RushDynamic/crypto-price-tracker-cli#readme",
+  "homepage": "https://github.com/RushDynamic/crypto-ticker-cli#readme",
   "devDependencies": {
     "eslint": "^8.10.0",
     "eslint-config-airbnb-base": "^15.0.0",
