@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import question from './utils/rl.js';
 import monitor from './services/monitoring-service.js';
 import * as term from './utils/term.js';
