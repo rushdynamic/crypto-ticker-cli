@@ -1,5 +1,5 @@
 {
-	"name": "@rushdynamic/crypto-ticker-cli",
+	"name": "crypto-ticker-cli",
 	"version": "1.0.2",
 	"description": "CLI tool that shows cryptocurrency prices in realtime",
 	"main": "src/app.js",
@@ -17,7 +17,8 @@
 		"binance api"
 	],
 	"repository": {
-		"url": "git://github.com/RushDynamic/crypto-ticker-cli.git"
+		"type": "git",
+		"url": "git+https://github.com/RushDynamic/crypto-ticker-cli.git"
 	},
 	"author": "Gokul Syam",
 	"license": "MIT",
