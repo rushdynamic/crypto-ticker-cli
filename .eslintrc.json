@@ -1,9 +1,18 @@
 {
-  "extends": ["airbnb-base", "plugin:@typescript-eslint/recommended"],
-  "rules": {
-    "no-console": "off",
-    "import/newline-after-import": "warn",
-    "comma-dangle": "off"
-  },
-  "plugins": ["prettier"]
+	"extends": ["airbnb-base"],
+	"rules": {
+		"no-console": "off",
+		"import/newline-after-import": "warn",
+		"comma-dangle": "off",
+		"import/extensions": "off",
+		"no-unused-vars": "warn",
+		"no-loop-func": "off",
+		"no-await-in-loop": "off",
+		"indent": "off",
+		"no-tabs": "off",
+		"max-len": "off",
+		"prefer-const": "warn",
+		"object-curly-newline": "off"
+	},
+	"plugins": ["prettier"]
 }
