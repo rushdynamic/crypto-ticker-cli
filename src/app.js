@@ -7,6 +7,10 @@ import * as term from './utils/term.js';
 	console.clear();
 	term.setSize(); // set initial terminal size
 	question('Enter a list of Coin Ticker Symbols: ', (resp) => {
+		if (!resp) {
+			console.log('Invalid entry');
+			return;
+		}
 		monitor(resp.split(' '));
 	});
 })();
