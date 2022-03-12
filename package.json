@@ -1,33 +1,43 @@
 {
-  "name": "crypto-ticker-cli",
-  "version": "1.0.0",
-  "description": "CLI tool that shows cryptocurrency prices in realtime",
-  "main": "src/app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RushDynamic/crypto-ticker-cli.git"
-  },
-  "author": "Gokul Syam",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/RushDynamic/crypto-ticker-cli/issues"
-  },
-  "homepage": "https://github.com/RushDynamic/crypto-ticker-cli#readme",
-  "devDependencies": {
-    "eslint": "^8.10.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.5.1"
-  },
-  "dependencies": {
-    "cli-cursor": "^4.0.0",
-    "ora": "^6.1.0",
-    "ws": "^8.5.0"
-  },
-  "type": "module"
+	"name": "crypto-ticker-cli",
+	"version": "1.0.0",
+	"description": "CLI tool that shows cryptocurrency prices in realtime",
+	"main": "src/app.js",
+	"bin": "src/app.js",
+	"scripts": {
+		"start": "node src/app.js"
+	},
+	"keywords": [
+		"cryptocurrency",
+		"price tracker",
+		"crypto-ticker-cli",
+		"realtime crypto price",
+		"realtime",
+		"crypto price",
+		"binance api"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/RushDynamic/crypto-ticker-cli.git"
+	},
+	"author": "Gokul Syam",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/RushDynamic/crypto-ticker-cli/issues"
+	},
+	"homepage": "https://github.com/RushDynamic/crypto-ticker-cli#readme",
+	"devDependencies": {
+		"eslint": "^8.10.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-import": "^2.25.4",
+		"eslint-plugin-prettier": "^4.0.0",
+		"prettier": "^2.5.1"
+	},
+	"dependencies": {
+		"cli-cursor": "^4.0.0",
+		"ora": "^6.1.0",
+		"ws": "^8.5.0"
+	},
+	"type": "module"
 }
