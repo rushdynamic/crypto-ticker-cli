@@ -1,5 +1,5 @@
 # 📈 Crypto-Ticker-CLI 
-Crypto-Ticker-CLI is a commandline application that shows cryptocurrency prices in realtime using WebSockets. 
+Crypto-Ticker-CLI is a commandline application that displays cryptocurrency prices in realtime using WebSockets. 
 
 ## 🛠 Installation
 #### Using *npm* package manager (recommended)
@@ -24,6 +24,8 @@ Example:
 ```
 crypto-ticker-cli
 Enter a list of Coin Ticker Symbols: btc eth ftm
+
+Output:
 
 Coin		Price (USDT)
 BTC	 --- 	39191.14
