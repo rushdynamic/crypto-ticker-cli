@@ -1,6 +1,6 @@
 {
 	"name": "crypto-ticker-cli",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "CLI tool that shows cryptocurrency prices in realtime",
 	"main": "src/app.js",
 	"bin": "src/app.js",
@@ -38,6 +38,7 @@
 	},
 	"dependencies": {
 		"cli-cursor": "^4.0.0",
+		"minimist": "^1.2.6",
 		"ora": "^6.1.0",
 		"ws": "^8.5.0"
 	},
