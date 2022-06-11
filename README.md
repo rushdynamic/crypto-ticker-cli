@@ -32,3 +32,15 @@ BTC	 --- 	39191.14
 ETH	 --- 	2589.99
 FTM	 --- 	1.2051
 ```
+
+### Run without question
+```
+crypto-ticker-cli btc eth ftm
+
+Output:
+
+Coin		Price (USDT)
+BTC	 --- 	39191.14
+ETH	 --- 	2589.99
+FTM	 --- 	1.2051
+```
