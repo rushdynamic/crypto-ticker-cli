@@ -1,14 +1,16 @@
-# 📈 Crypto-Ticker-CLI 
-Crypto-Ticker-CLI is a commandline application that displays cryptocurrency prices in realtime using WebSockets. 
+# 📈 crypto-ticker-cli
+crypto-ticker-cli is a commandline application that displays cryptocurrency prices in realtime from Binance using WebSockets. 
 
 ## 🛠 Installation
 #### Using *npm* package manager (recommended)
-Run the following command:
-
+Install globally
 ```
 npm i -g crypto-ticker-cli
 ```
-
+Or run directly
+```
+npx crypto-ticker-cli
+```
 #### From source
 ```
   git clone -b main https://github.com/RushDynamic/crypto-ticker-cli
