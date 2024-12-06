@@ -35,7 +35,7 @@ ETH	 --- 	2589.99
 FTM	 --- 	1.2051
 ```
 
-### Run without question
+### Run with args
 ```
 crypto-ticker-cli btc eth ftm
 
